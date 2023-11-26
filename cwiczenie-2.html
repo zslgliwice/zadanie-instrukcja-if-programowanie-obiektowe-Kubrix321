@@ -22,8 +22,39 @@
 	
 		function sprawdz()
 		{
+			var wiek = document.getElementById("wiek").value;
+			var imie = document.getElementById("imie").value;
 			
+			if (wiek < 16)
+			{
+				document.getElementById("wynik").innerHTML = "Nie może wziąć udziału w seansie";
+
+			}
+
+			if (wiek == 16 || wiek == 17)
+			{
+				document.getElementById("wynik").innerHTML = "Może wziąć udział, jeśli jest z opiekunem (Cena biletu 12zł) ";
+
+			}
+
+			if (wiek >= 18)
+			{
+				document.getElementById("wynik").innerHTML = "Może wziąć udział (Cena biletu 18zł) ";
+
+			}
+
+			if (wiek >= 18 && imie == "Brad" || imie == "brad")
+			{
+				document.getElementById("wynik").innerHTML = "Witamy Brad, wchodzisz za darmo!";
+			}
+
+			if (wiek >= 18 && imie == "Morgan" || imie == "morgan")
+			{
+				document.getElementById("wynik").innerHTML = "Witamy Morgan, wchodzisz za darmo!";
+			}
+
 			
+
 		}
 
 	</script>
